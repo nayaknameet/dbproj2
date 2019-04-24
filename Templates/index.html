@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>World_cup</title>
+    <style>
+        table, th, tr{
+            border-style: None;
+            color: white;
+            text-shadow: black 0px 0px 10px;
+
+        }
+        body{
+            background-image: url(/static/world_cup_image.jpg);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+
+}
+        .error_msg{
+            color:red;
+            text-shadow: black 0px 0px 1px;;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h2 align="center">Soccer_data</h2> <br><br>
+
+    <form align = "center" method = "POST" action = "/send">
+        Country Name:*<br>
+        <input type="text" name = "country_name">
+        <br>
+        Color:<br>
+        <input type ="text" name ="color">
+        <br><br>
+        <input type = "submit" value = "Submit">
+    </form>
+
+    <p align="center" class="error_msg">{{error_msg}}</p>
+
+    <table align="center" border="1" >
+
+        {% if table_names_1 %}
+        <tr>
+            <th> {{table_names_1[0]}}</th>
+            <th> {{table_names_1[1]}}</th>
+            <th> {{table_names_1[2]}}</th>
+        </tr>
+        {% endif %}
+
+             {% for value in variable %}
+                <tr>
+                    <td>{{value[0]}}</td>
+                    <td>{{value[1]}}</td>
+                    <td>{{value[2]}}</td>
+                </tr>
+             {% endfor %}
+          </table>
+
+
+    <table align="center" border="1">
+        {% if table_names_2%}
+        <tr>
+            <th>{{table_names_2[0]}}</th>
+            <th>{{table_names_2[1]}}</th>
+        </tr>
+        {% endif %}
+
+            {% for value in q2 %}
+                <tr>
+                    <td>{{value[0]}}</td>
+                    <td>{{value[1]}}</td>
+                </tr>
+             {% endfor %}
+
+    </table>
+</body>
+</html>
