@@ -99,4 +99,4 @@ def user_inputs():
 
 if __name__ == '__main__':
     wc1 = WorldCup()
-    app.run(debug=True)
+    app.run()
