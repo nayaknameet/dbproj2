@@ -10,6 +10,7 @@ Please make sure you have a server running on workbench and you have the databas
 Libraries: mysql.connector, flask and re
 
 Open pycharm->open project-> select this project
+install needed liraries
 Credentials-> Enter your own credentials->password
 run->world_cup.py
 
