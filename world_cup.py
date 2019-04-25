@@ -49,7 +49,7 @@ class WorldCup:
     def wc_country(self, country_name):
         # For 1st query
         cc = self.cursor
-        self.cursor.execute((Query.q1).format(country_name, country_name))
+        self.cursor.execute((Query.q1).format(country_name))
         result = self.cursor.fetchall()
         return result
 
@@ -86,7 +86,7 @@ def user_inputs():
         if not result:                                                  # Results are empty, therefore no data exists
             return render_template("index.html", error_msg="No such data exists")
         else:
-            return render_template("index.html", variable=result, table_names_1=['GameID', 'Player_No', 'Player_Name'])
+            return render_template("index.html", variable=result, table_names_1=['GameID', 'Player_Name', 'Player_No'])
     elif input_val == False:                                            # Both the inputs are returned
         result = wc1.wc_color(country_name, color)
         if not result:
@@ -99,4 +99,4 @@ def user_inputs():
 
 if __name__ == '__main__':
     wc1 = WorldCup()
-    app.run()
+    app.run(debug=True)
