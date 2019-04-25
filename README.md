@@ -13,7 +13,7 @@ Open pycharm->open project-> select this project
 Credentials-> Enter your own credentials->password
 run->world_cup.py
 
-Open the browser
+3)Open the browser
 -Go to localhost:5000 or 127.0.0.1:5000
 -Enter inputs
     -Country name is mandatory requirement
