@@ -1,6 +1,6 @@
 credentials_dict = {
     'user': 'root',
-    'password': 'nameet12',
+    'password': '',
     'host': 'localhost'
 }
 

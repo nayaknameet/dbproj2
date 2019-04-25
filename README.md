@@ -10,6 +10,7 @@ Please make sure you have a server running on workbench and you have the databas
 Libraries: mysql.connector, flask and re
 
 Open pycharm->open project-> select this project
+Credentials-> Enter your own credentials->password
 run->world_cup.py
 
 Open the browser
@@ -18,5 +19,4 @@ Open the browser
     -Country name is mandatory requirement
     -Card color is optional
     -Hit submit
-
 
